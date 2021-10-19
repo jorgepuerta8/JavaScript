@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcion autoejecutable</title>
+</head>
+<body>
+    <script>
+//se ejecutan cuando se declaran. se usan cuando quieres implementar el patron de diseño modulo  
+/*(function()
+{
+})(parametros a la funcion)
+
+*/
+(function(mensaje){
+    alert(mensaje);
+})("hola mundo "); //este es el mensaje
+
+let nmodulo1=(function(mensaje){
+    return mensaje.toUpperCase();
+})("otro metodo");
+let nmodulo2=(function(mensaje){
+    alert(mensaje);
+})(nmodulo1);
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*    
+
+1º metodo
+function suma (a,b,...numeros){
+    let acum=0;
+    for (let index = 0; index < array.length; index++) {
+        //sumarlo a un contador
+        acum+=numeros[index];
+    }
+    return acum; 
+}*/
+/*2º metodo con arguments >(no se recomiends)
+function suma(){
+    let acum=0;
+    for (let index = 0; index < arguments.length; index++) {
+        acum  += arguments[index];
+        //el objeto arguments se fuardan los parametros que se 
+        //poasan a la función
+        //arguments no peude usar elemntos de array pero es Iterable
+        //para tartarklo como array se usa lo siugiente
+        //let numeros=Array.from(arguments); 
+    }
+    return acum;
+}
+*/
+//3º funcion anonima
+let suma=function (dato=0,...resto){
+alert("es una funcion anonima");
+return dato;
+}
+//sentencias
+
+console.log();
+console.log(suma(5,6));
+console.log(suma(5,6,7));
+console.log(suma(5,6,76,23,1));
+console.log(suma(5,6,33));
+console.log(suma(5,6,21,4,55,43,9,20,7,8,));
+
+    </script>
+</body>
+</html>

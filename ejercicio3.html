@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <script>
+/*
+Crear una estructura de decisión que permita identificar la talla de una prenda de ropa a partir de las tallas europeas.
+Los valores posibles de las tallas europeas serían  XXXL, XXL, XL, L, M,  S y XS y la talla esperada sería Extragrande=XXXL,XXL,XL, Grande=L, Mediana=M, Pequeña=S, Extrepequeña=XS.
+Introduce mediante un prompt  una talla europea y muestra en consola la talla de prenda.
+
+*/
+function switchEj3(){
+  
+let talla;
+talla=prompt("inserte una talla (XS, S, M,L,XL, XXL, XXXL)");
+console.time();
+switch(talla.toUpperCase()){
+case "XS":
+    alert("Talla extrapequeña");
+    break;
+    case "S":
+    alert("Talla pequeña");
+    break;case "M":
+    alert("Talla Mediana");
+    break;
+    case "L":
+    alert("Talla Grande");
+    break;
+    case "XL":
+    case "XXL":
+    case "XXXL":
+    alert("Talla extra grande");
+   break;
+   default:
+      talla= prompt("error, no se ha reconocido la talla. Inserte una talla");
+    break;
+  
+   
+}//fin switch
+console.timeEnd();
+}
+function ifAnidado(){
+  
+    let talla;
+talla=prompt("inserte una talla (XS, S, M, L, XL, XXL, XXXL)");
+console.time();
+if(talla.toUpperCase()==="XS"){
+    alert("Talla extrapequeña");
+}
+else if(talla.toUpperCase()==="S"){
+    alert("Talla pequeña");
+
+}
+else if(talla.toUpperCase()==="M"){
+    alert("Talla mediana");
+
+}
+else if(talla.toUpperCase()==="L"){
+    alert("Talla grande");
+
+}
+else if(talla.toUpperCase()==="XL"||talla.toUpperCase()==="XXL"||talla.toUpperCase()==="XXL"){
+    alert("Talla extragrande");
+
+}
+else{
+alert("no ha ingresado ninguna opción correcta");
+}
+console.timeEnd();
+
+}//fin del function
+
+let resp=prompt("Elija la opción: 1 para realizar en switch 2: si se realiza en if anidado");
+
+if(resp==="1"){
+    switchEj3();
+}else if(resp==="2"){
+ifAnidado();
+}
+
+
+
+
+
+    </script>
+</body>
+</html>

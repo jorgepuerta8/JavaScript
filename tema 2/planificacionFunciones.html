@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plnaificacion funciones</title>
+</head>
+<body>
+    <button>parar intervalo</button>
+<script>
+/*//se peude poner temproizador ciclico o con retardo
+setTimeout(function() {
+ //callback = funcion dentro de una funcion    
+alert("hola");
+});//los segundos
+setTimeout(function(m) {
+ //callback = funcion dentro de una funcion    
+alert(m);
+}, 5000,"hola mundo");//los segundos
+
+let bienvenida=function(mensaje){
+    alert (mensaje)
+
+}
+setTimeout
+*/
+let bienvenida=function(mensaje){
+    alert (mensaje);
+
+}
+ let timer=setTimeout(bienvenida,5000, "hola mundo 2");
+ let intervalo=setInterval(function(){
+     console.log("intervaloo")
+ }, 1000);
+ document.querySelector("button").onclick=function(){
+     clearInterval(intervalo);
+ }
+</script>
+</body>
+</html>

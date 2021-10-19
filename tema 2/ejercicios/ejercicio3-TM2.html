@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 Tema 2</title>
+</head>
+<body>
+    <script>
+/**
+ * Adapta el ejercicio 3 del tema anterior, creando una función que acepte como parámetro una talla europea
+(S,L,..) y devuelva la talla de prenda.
+ * 
+ * */
+ let talla;
+ let All_Tallas=["XS", "S", "M","L", "XL", "XXL", "XXXL"];
+ 
+ function switchEj3(...All_Tallas){
+  
+   
+
+    //comienzo del switch
+  switch(talla.toUpperCase()){
+  case "XS":
+      alert("Talla extrapequeña");
+      break;
+      case "S":
+      alert("Talla pequeña");
+      break;case "M":
+      alert("Talla Mediana");
+      break;
+      case "L":
+      alert("Talla Grande");
+      break;
+      case "XL":
+      case "XXL":
+      case "XXXL":
+      alert("Talla extra grande");
+     break;
+     default:
+        talla= prompt("error, no se ha reconocido la talla. Inserte una talla");
+      break;
+    
+     
+  }//fin switch
+ 
+  }//fin function
+  do{
+    talla=prompt("inserte una talla (XS, S, M, L,XL, XXL, XXXL)");
+  if(All_Tallas.includes(talla.toUpperCase())==false){
+    talla=prompt("Se ha equivocado, inserte una talla (XS, S, M,L,XL, XXL, XXXL)");
+  }
+  
+}while(All_Tallas.includes(talla.toUpperCase())==false); //mientras no encuentre la talla en el array, que se siga ejecutando
+switchEj3(...All_Tallas);
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcion flecha</title>
+</head>
+<body>
+    <button value="hola">PULSA</button>
+    <script>
+//uso de fora general salvo casos concretos
+//funcion flecha con varios parametros 
+/**
+let suma=(...dato)=>  {   //la felcha es así. equivalente a 
+ console.log(dato.toString());
+ }
+ let suma=(dato)=>{
+     console.log(dato.toString());
+ }
+console.log(suma());
+console.log(suma(2,3,4,322,21,1));
+//F. Flechacon un return
+let suma=(dato)=> dato**2; //si es un return no hace fatla als llaves
+**/
+//el query selector busca la 1ª etiqueta html
+let boton=document.querySelector("button");
+/*
+//eventos (es mejor declararlo todos juntos)
+boton.onclick=function(){
+  //  alert(this.value);
+ALERT("HAS PULSADO EL BOTON");
+}
+//con flecha
+*/
+boton.onclick=()=>{
+  //  alert(this.value);
+ALERT(this.value);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num=[1,2,3,4];
+        console.log(num)+" sin slice";
+        num.splice(3,1,14);
+        console.log(num)+" con slice";
+       
+        num.splice(2,0,5); //posicion 0, 
+       //el 2º valor sustituye (!=0)el nº de elementos
+       //3º el elmento que sistutye o se añade
+        console.log(num)+" con slice";
+        
+     </script>   
+</body>
+</html>

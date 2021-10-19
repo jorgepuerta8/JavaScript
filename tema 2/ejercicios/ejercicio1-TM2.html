@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta author="Jorge-Puerta">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 Tema 2</title>
+</head>
+<body>
+    <script>
+/**
+1.-Basándonos en el ejercicio 1 del tema anterior; crea un función que acepte un parámetro y devuelva un
+array de números. El parámetro es el número de elementos del array. La función debe asegurarse que los
+elementos del array sean todos números. La función no se interrumpirá por ningún error. Si al introducir un
+dato, éste no es un número nos deberá volver a pedir el dato hasta que sea un número.
+
+**/
+let num,  param;
+let array=[];
+
+function array1(param){
+
+for (let index = 0; index < param; index++) {
+    do{
+num=prompt("ingresa un numero");
+if(isNaN(num)==true){
+    num=prompt("no has introducido un numero, escribe de nuevo");
+
+}
+else{ //si es correcto
+array.push(num);
+}
+}while(isNaN(num)==true);    
+}
+console.log(array);
+}
+
+
+do{
+    param=prompt("¿de qué tamaño quieres el array?");
+    if(isNaN(param)===true){
+        param=prompt("no has introducido un numero, escribe de nuevo");
+    }else{
+        array1(param);
+    }
+}while(isNaN(param)===true);
+
+    </script>
+</body>
+</html>

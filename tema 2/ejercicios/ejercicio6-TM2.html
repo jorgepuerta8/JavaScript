@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6 Tm 2</title>
+</head>
+<body>
+    <script>
+/*
+6.-Adapta el ejercicio 7 del tema anterior, creando una función que acepte un número como argumento y
+devuelva un array. Si es primo el array tiene un mensaje. Si no es primo el array contiene los divisores del
+número.
+*/
+
+let arrayPrimo=[];
+let num, resto, cont;
+
+function calcularPrimo(num){
+for (let index = 1; index <=num; index++) {
+    resto=num%index;
+    if(resto===0){
+        cont++;
+       
+        arrayPrimo.push(index);
+    }
+}
+return arrayPrimo;
+}
+
+num=prompt("Dame un numero y te diré si es primo o no");
+calcularPrimo(num);
+if(arrayPrimo.length===2){
+    alert(num+" es primo \n");
+alert(arrayPrimo); 
+    
+}
+else{
+alert(num+" no es primo \n");
+alert(arrayPrimo); 
+}
+    </script>
+</body>
+</html>

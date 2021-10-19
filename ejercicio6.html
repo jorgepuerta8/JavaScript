@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+    <script>
+/*
+
+6.-La Sociedad Española para el Estudio de la Obesidad define el IMC (índice de masa corporal) de una
+persona mediante la fórmula:
+IMC = Peso (kg) / altura (m) 2
+Ejemplo: 67 Kg y 1,80 m. de altura
+IMC=67/(1,80)2
+
+= 20,68, Peso normal
+
+Cotejando el resultado con la siguiente tabla se determina el grado de obesidad de la persona:
+< 18,5 Peso insuficiente
+18,5 - <25 Normal
+25 - <27 Sobrepeso grado I
+27 - <30 Sobrepeso grado II
+30- <35 Obesidad I
+35 - <40 Obesidad II
+
+40 - <50 Obesidad III (mórbida)
+> 50 Obesidad III (extrema)
+Introducir los datos de altura y peso mediante la función prompt. Validar que los datos sean numéricos.
+Obtener el IMC mediante una función a la que se le pasen el peso y la altura. Mostrará en la consola del
+navegador el IMC y un texto indicando el grado de obesidad : console.log(IMC).
+*/
+let peso, h, IMC;
+do{
+peso=prompt("escriba su peso");
+h=prompt("escriba su altura");
+}while(isNaN(Number(peso)) || isNaN(Number(h)));
+IMC=peso/(Math.pow(h,2));
+switch(true){
+  case  IMC<18.5:
+    alert("peso insuficiente");
+    console.log(IMC);
+    break;
+    case  IMC>18.5 && IMC<25:
+    alert("peso normal");
+    console.log(IMC);
+    break;
+    case  IMC>25 && IMC<27:
+    alert("Sobrepeso grado I");
+    console.log(IMC);
+    break;
+    case  IMC>27 && IMC<30:
+    alert(" Sobrepeso grado II");
+    console.log(IMC);
+    break;
+    case  IMC>30 && IMC<35:
+    console.log(IMC);
+    alert("obesidad grado I");
+    break;
+    case  IMC>35 && IMC<40:
+    console.log(IMC);
+    alert("obesidad grado II");
+    break;
+    case  IMC>40 && IMC<50:
+    console.log(IMC);
+    alert("obesidad III (mórbida)");
+    break;case  IMC>50:
+    console.log(IMC);
+    alert("obesidad IV(extrema)");
+    break;
+    default:
+    alert("No se ha podido determinar");  
+    break;
+}
+    </script>
+</body>
+</html>

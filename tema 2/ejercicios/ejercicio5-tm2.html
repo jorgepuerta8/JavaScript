@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5 tema 2</title>
+</head>
+<body>
+    <script>
+        /*
+        5.-Adapta el ejercicio 6 del tema anterior, creando una función que acepte dos parámetros: peso y altura y
+devuelva el IMC.*/
+let peso, h, IMC;
+
+function calcularIMC(peso,h){
+    IMC=peso/(Math.pow(h,2)); //calculamos el IMC
+    //abrimos switch con true
+    switch(true){
+        case IMC<18.5:
+    alert("peso insuficiente");
+    console.log(IMC);
+    break;
+    case  IMC>18.5 && IMC<25:
+    alert("peso normal");
+    console.log(IMC);
+    break;
+    case  IMC>25 && IMC<27:
+    alert("Sobrepeso grado I");
+    console.log(IMC);
+    break;
+    case  IMC>27 && IMC<30:
+    alert(" Sobrepeso grado II");
+    console.log(IMC);
+    break;
+    case  IMC>30 && IMC<35:
+    console.log(IMC);
+    alert("obesidad grado I");
+    break;
+    case  IMC>35 && IMC<40:
+    console.log(IMC);
+    alert("obesidad grado II");
+    break;
+    case  IMC>40 && IMC<50:
+    console.log(IMC);
+    alert("obesidad III (mórbida)");
+    break;case  IMC>50:
+    console.log(IMC);
+    alert("obesidad IV(extrema)");
+    break; 
+    }//fin switch
+}//fin function
+
+do{
+peso=prompt("escriba su peso");
+h=prompt("escriba su altura");
+if(isNaN(Number(peso)) || isNaN(Number(h))){
+    peso=prompt("error, escriba su peso");
+h=prompt("werror, escriba su altura");
+}
+}while(isNaN(Number(peso)) || isNaN(Number(h)));
+
+calcularIMC(peso, h); //funcion
+    </script>
+</body>
+</html>

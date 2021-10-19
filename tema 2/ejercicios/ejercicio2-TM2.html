@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta author="Jorge-Puerta">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 tema 2</title>
+</head>
+<body>
+    <script>
+/**
+2.-Basándonos en el ejercicio 2 del tema anterior, crea una función que acepte un array como argumento y
+devuelva otro array con dos elementos:el mayor y menor número del array argumento. Intenta hacer el
+ejercicio utilizando como argumento el array devuelto por la función del ejercicio 1.
+**/
+let array=[];
+let arrayMaxMin=[];
+let param,num, min, max;
+//1º declaramos array1
+
+    do{
+    param=prompt("¿de qué tamaño quieres el array?");
+    if(isNaN(param)===true){
+        param=prompt("no has introducido un numero, escribe de nuevo");
+    }
+}while(isNaN(param)===true);
+for (let index = 0; index < param; index++) {
+    do{
+num=prompt("ingresa un numero");
+if(isNaN(num)==true){
+    num=prompt("no has introducido un numero, escribe de nuevo");
+
+}
+else{ //si es correcto
+array.push(num);
+}
+}while(isNaN(num)==true);    
+}
+console.log("este es el array1 "+array);
+
+function arrayMaxMinFn(...array){
+min=Math.min(...array);
+console.log(min+" es el valor más pequeño");
+max=Math.max(...array);
+console.log(max+" es el valor más alto");
+arrayMaxMin=[min,max];
+return arrayMaxMin;
+
+}
+//ejecutamos las funciones
+arrayMaxMinFn(...array);
+console.log(arrayMaxMin);
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>ejercicio 2</title>
+</head>
+<body>
+    <script>
+        let num;
+        let arrayNum=[];
+        let min;
+        let max;
+        let i=0;
+        do{
+             
+            do{
+                num = prompt("Teclea un numero"); 
+                  
+                if(isNaN(num)){
+                    num=prompt("escribe de nuevo, que no has puesto un numero");
+                }
+
+            }while(isNaN(num));
+            //terminada la validación
+            arrayNum.push(num); //cambiar
+            i++;
+        }while(i<10);
+alert("el numero más alto es "+Math.max(...arrayNum));
+
+alert("el numero más bajo es "+Math.min(...arrayNum));
+
+    </script>
+</body>
+</html>
