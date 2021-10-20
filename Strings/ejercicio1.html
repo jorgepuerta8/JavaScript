@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <script>
+/**
+ * 1.-Dado el siguiente texto "hola que tal.como estás.yo muy bien" crea un string donde se corrige la falta
+ortográfica existente de poner en mayúscula la primera letra de una frase.
+ **/
+let texto=("hola que tal.como estás.yo muy bien");
+let primerPunto=texto.split("."); //split para dividrlo en cadenas
+
+let letraM=primerPunto[0].charAt(0).toUpperCase(); //capturamos la primera letra para capitalizarla
+let substring0=primerPunto[0].substring(1,primerPunto[0].length); //resto de la cadena
+
+let letraM2=primerPunto[1].charAt(0).toUpperCase();
+let substring2=primerPunto[1].substring(1,primerPunto[1].length);
+
+
+
+let letraM3=primerPunto[2].charAt(0).toUpperCase();
+let substring3=primerPunto[2].substring(1,primerPunto[2].length);
+
+
+let txtCompleto=letraM+substring0+"."+letraM2+substring2+"."+letraM3+substring3; //concatenamos todo
+alert(txtCompleto);
+    </script>
+</body>
+</html>
