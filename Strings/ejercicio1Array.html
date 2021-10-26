@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Partiendo del siguiente array [1,5,2,7,3,2,4,5,8,7,3,4,5,6,7,3,8,4,1]
+        // ordénalo y que no hay elementos repetidos.
+        let array=[[1,5,2,7,3,2,4,5,8,7,3,4,5,6,7,3,8,4,1]];
+        alert(array);
+    
+        let a=array.sort();//ordenado
+        alert(a);
+        for (let index = 0; index < array.length; index++) {
+            if(index>1){
+                
+                if(array.indexOf(index)===array[indice-1]){
+                    array.splice(indice);
+                }
+            }
+            
+        }
+        alert (array);
+    </script>
+</body>
+</html>
