@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let persona = {
+        iden: ["pepe", "lopez", "rodriguez"], //PROPIEDAD ARRAY
+        edad: 20, //PROPIEDAD TIPO NUMBER
+        direccion: {
+          //PROPIEDAD TIPO OBJECT
+
+          calle: "Villabañez s/n",
+          poblacion: "Valladolid",
+          provincia: "Valladolid",
+          cp: 47001,
+        },
+        casado: true, //PROPIEDAD TIPO BOOLEAN
+        nombreCompleto: function () {
+          // METODO
+          console.log(this.iden.toString());
+        },
+      };
+      let pers2 = {
+        id: {
+          nombre: "fernando",
+          ap1: "Díaz",
+          ap2: "Gómez",
+        },
+        mostar: function () {
+          console.log(
+            `<br> el usuario se llama ${this.id.nombre}, de apellidos${this.id.ap1}${this.id.ap2} `
+          );
+        },
+        //otra forma, mas moderna mejor
+        mostrar2() {
+          console.log(
+            `<br> el usuario se llama ${this.id.nombre}, de apellidos${this.id.ap1}${this.id.ap2} `
+          );
+        },
+      };
+      //se puede añadir mas pero no es lo más aconsejable
+      pers2.casa = {
+        calle: "Falsa",
+        num: "1,2,3",
+      };
+      let personaPara3 = new pers3("Juan", "Pastor", "Dominguez");
+      pers2.mostar();
+
+      function pers3(nombre, apellido1, apellido2) {
+        this.nombre = nombre;
+        this.ap1 = apellido1;
+        this.ap2 = apellido2;
+      }
+    </script>
+  </body>
+</html>
