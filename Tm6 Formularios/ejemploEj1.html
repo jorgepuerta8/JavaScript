@@ -32,6 +32,11 @@
     <p id="listado"></p>
       
 <script>
+    //funcion validar
+    function validacion(){
+        let valido=true;
+        return valido;
+    }
 //arrray de productos
 function agregar(){
     //1º capturamos los valores del fomrulairo
@@ -59,7 +64,7 @@ function listar(){
             cadena+=`<td>${P.precio}</td>`;
             cadena+=`<td>${P.cantidad}</td>`;
         cadena+="</tr>";
-        importeTotal=P.cantidad*P.precio;
+        importeTotal+=P.cantidad*P.precio;
     });
     cadena+=`<tr><td>Improte total</td><td>${importeTotal}</td></tr>`;
     cadena+="</table>";
