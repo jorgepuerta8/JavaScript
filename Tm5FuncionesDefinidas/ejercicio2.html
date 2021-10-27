@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 1</title>
+</head>
+<body>
+    <form>
+        <label>Nombre Empresa</label>
+        <input type="text" id="nombreEmpresa"><br>
+        <label>Dirección</label>
+        <input type="text" id="dir"><br>
+        <label>Teléfono</label>
+        <input type="text" id="tfno"><br>    
+        <label>precio bojeto</label>
+        <input type="text" id="precio"><br>
+        <label>Cantidad</label>
+        <input type="text" id="cantidad"><br>
+        <label>tipo de iva</label>
+        <input type="text" id="iva"><br>
+        <button id="calcular" onclick="factura.calcular">calcular</button><br>
+        <p id="facturaMostrar"></p>
+    </form>
+    <script>
+        /**
+        1.-Crear un objeto nativo que almacena una factura. Las facturas están formadas por la información de la
+propia empresa (nombre de la empresa, dirección, teléfono, NIF), la información del cliente (similar a la de la
+empresa), una lista de elementos (cada uno de los cuales dispone de descripción, precio, cantidad) y otra
+información básica de la factura (importe total, tipo de iva, forma de pago).
+Definir un interface de tipo formulario que permita la creación de dicho objeto. Dispondrá de todos los
+controles necesarios para agregar los datos correspondientes a cada propiedad del objeto.
+Crear un método que calcule el importe total de la factura y actualice el valor de la propiedad correspondiente.
+Crear un método que escriba debajo del formulario los detalles de los items de la factura y el importe total.
+Este método se activará cuando se pulse un botón que se agregará al formulario.
+        **/
+       //1º conseguir scaar esos elemntos
+       let precio=document.getElementById("precio").value;  
+       let nombre=document.getElementById("nombre");
+       let dir=document.getElementById("dir").value;
+       let tfno=document.getElementById("tfno").value;
+       let iva=document.getElementById("iva").value;
+      let cantidad=document.getElementById("cantidad").value;
+      let calcular=document.getElementById("calcular").ocnlcick;
+      let facturaMostrar=document.getElementById("facturaMostrar");
+      //2º creamos la clase
+class factura{
+    constructor(precio,cantidad,iva,nombre,dir,tfno){ //para calcular el importe total, 
+        this.precio=precio;
+        this.iva=iva;
+        this.cantidad=cantidad;
+        this.nombre=nombre; this.dir=dir; this.tfno=tfno;
+    }
+   impTotal=function(precio,cantidad,iva){
+       iva=iva/100;
+    return (precio*cantidad)*(1-iva);
+  }
+ texto=function(){
+  textoA=`\t Nombre empresa: ${nombre}
+  \n\t cantidad${cantidad}
+  \n\t precio${precio}
+  \n\t IVA${iva}
+  \n\tFactura total:${impTotal}€`;
+  facturaMostrar.innerHTML()=textoA;
+ };
+}
+if(calcular==true){
+factura.impTotal(precio,cantidad,iva);
+factura.texto();
+}
+    </script>
+</body>
+</html>
