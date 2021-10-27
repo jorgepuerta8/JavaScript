@@ -46,9 +46,10 @@ function agregar(){
     //2º isntanciamos producto
     if(validacion()){ //si es valido
         let P=new Producto(nombre,precio,cantidad);
+        productos.push(P);
     }
     //3º agregarlo al array
-    productos.push(P);
+ 
     //vaciar el contenido de los controles
     document.getElementById("np").value="";
     document.getElementById("pp").value="";
