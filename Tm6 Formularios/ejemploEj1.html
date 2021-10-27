@@ -33,7 +33,7 @@
       
 <script>
     //funcion validar
-    function validacion(){
+    function validacion(nombre, cantidad, precio){
         let valido=true;
         return valido;
     }
@@ -44,7 +44,9 @@ function agregar(){
     let precio=document.getElementById("pp").value;
     let cantidad=document.getElementById("cp").value;
     //2º isntanciamos producto
-    let P=new Producto(nombre,precio,cantidad);
+    if(validacion()){ //si es valido
+        let P=new Producto(nombre,precio,cantidad);
+    }
     //3º agregarlo al array
     productos.push(P);
     //vaciar el contenido de los controles
